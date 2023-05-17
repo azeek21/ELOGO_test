@@ -118,11 +118,23 @@ const sidebarInit = () => {
         } catch (e) {
             
         }
+        return ;
     } else if (collapse && collapse == 'false') {
         sidebar.classList.remove('sidebar_collapsed');
         // actually, if collapse is false, there's nothing to do
         // which means above line is useless, but this is more verbose and 
         // clears up any assumptions
+        return ;
+    }
+
+    // a bit of innteligent sidebar collapse for mobile visiting for the first time
+    if (window.innerWidth < 500) {
+        sidebar.classList.add('sidebar_collapsed');
+        try {
+            document.getElementById('logo-img').setAttribute('src', "assets/img/e.svg")
+        } catch (e) {
+            
+        }
     }
 
 }
