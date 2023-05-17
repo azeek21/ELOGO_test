@@ -17,6 +17,36 @@
     <title>ELGO</title>
   </head>
   <body class="body">
+
+    <dialog id="action-dialog" class="modal">
+        <div class="card">
+            <div class="card__item">
+                <div class="divided">
+                    <h4 class="card__title">
+                        Connect exchange 
+                         <img src="assets/img/binance.svg" alt=" "> 
+                         Binance
+                    </h4>
+                    <div class="close-button" onclick="closeModal()">
+                        <span class="first"></span>
+                        <span class="second"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="card__divider"></div>
+            <div class="card__item list">
+                <p>
+                    <span class="counter counter_active">1</span> Log in to you account on the website Binance
+                </p>
+                <p> <span class="counter counter_active">2</span>Click on the "Connect" button</p>
+                <p>  <span class="counter counter_active">3</span> Confirm your connection to EEE</p>
+            </div>
+            <div class="card__item">
+                <button class="button button_tertiary full_width center">Connect Binance</button>
+            </div>
+        </div>
+    </dialog>    
+
     <aside id="sidebar" class="sidebar">
         <div class="sidebar__header">
             <a class="logo-container" href="#">
@@ -30,6 +60,12 @@
         <div class="sidebar__main">
 
             <div class="sidebar__main__item">
+
+                <button  class="button full_width" onclick="showModal()">
+                    <img src="assets/img/binance.svg" alt="MODAL">
+                    <p class="pad-mar_0">Modal</p>
+                </button>
+
                 <button class="button full_width">
                     <img src="assets/img/home.svg" alt="HOME">
                     <p class="pad-mar_0">Home</p>
@@ -95,7 +131,7 @@
         <h3 class="page-title">Settings. NOTE: Actively under development</h3>
         <div>
             <div class="page__content">
-                <div class="card">
+                <div class="card grid_personal">
                     <div class="card__item">
                     <h4 class="card__title">Personal data</h4>
                     </div>
@@ -129,7 +165,7 @@
                     </div>
                 </div>
 
-                <div class="card">
+                <div class="card grid_security">
                     <div class="card__item">
                         <h4 class="card__title">Security</h4>
                     </div>
@@ -193,7 +229,7 @@
                     </div>
                 </div>
 
-                <div class="card">
+                <div class="card grid_billing">
                     
                     <div class="card__item">
                         <h4 class="card__title">Billing</h4>
@@ -233,7 +269,7 @@
                     </div>
                 </div>
 
-                <div class="card">
+                <div class="card grid_language">
                     <div class="card__item">
                         <h4 class="card__title">
                             Language
@@ -258,7 +294,10 @@
                                     </div>
                                 </label>
                             </div>
-
+                        </form>
+                    </div>
+                    <div class="card__item">
+                        <form action="" class="form">
                             <div class="form__item">
                                 <label class="form__input-label">
                                     Time zone
@@ -275,7 +314,10 @@
                                     </div>
                                 </label>
                             </div>
-
+                        </form>
+                    </div>
+                    <div class="card__item">
+                        <form action="" class="form">
                             <div class="form__item">
                                 <div class="divided">
                                     <input type="text" class="form__input fs_12" placeholder="Code">
@@ -287,15 +329,15 @@
                     </div>
                 </div>
 
-                <div class="card span_2">
-                    <div class="card__item">
+                <div class="card grid_table">
+                    <div class="card__item" style="padding: 9px 20px">
                         <div class="divided">
                             <h4 class="card__title">Notifications</h4>
-                            <button class="button button_tertiary fw_500 fs_12"> Connect telegram bot </button>
+                            <button class="button button_tertiary fw_500"> Connect telegram bot </button>
                         </div>
                     </div>
                     <div class="card__divider"></div>
-                    <div class="card__item">
+                    <div class="card__item table__container">
                         <table class="table" border>
                             <tr>
                                 <th></th>

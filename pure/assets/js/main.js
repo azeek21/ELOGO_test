@@ -83,9 +83,23 @@ const dropdownToggle = (ev) => {
                 const value = option.getAttribute('data-value');
                 const name = option.textContent;
                 dropdown.setAttribute('data-selected', value);
-                value_container.textContent = name;
+                try {
+                    value_container.textContent = name;
+                } catch (e) {
+                    console.log('help wanted... see main.js line 89.')
+                }
                 dropdown.removeAttribute('data-open')
             }
         })
     }
+}
+
+const showModal = () => {
+    const modal = document.getElementById('action-dialog');
+    modal.showModal();
+}
+
+const closeModal = () => {
+    const modal = document.getElementById('action-dialog');
+    modal.close();
 }

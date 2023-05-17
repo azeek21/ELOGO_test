@@ -6,7 +6,8 @@
 @import "form/form";
 @import "dropdown/dropdown";
 @import "table/table";
-
+@import "modal/modal";
+@import "close-button/close";
 *,
 *::after,
 *::before {
@@ -101,9 +102,9 @@
     &__image {
         display: flex;
         align-items: center;
-        justify-content: start;
-        width: 20%;
+        justify-content: center;
         justify-self: end;
+        flex-grow: 1;
     }
     &__text {
         font-weight: 600;
@@ -120,3 +121,12 @@
     align-items: center;
     justify-content: center;
 }
+
+.list {
+    p {
+     margin: 0;
+     padding: 0;
+     display: flex;
+     gap: 8px;
+    } 
+ }
