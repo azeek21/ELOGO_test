@@ -5,6 +5,7 @@ PREVIEW: [https:abdulaziz.codes/ELGO_test/pure](http://abdulaziz.codes/ELOGO_tes
 I only used sass(scss) to scc compiler. <br/>
 I just don't like repeatedly typing classnames. <br/>
 Scss let's you avoid that by letting you nest classnames.
+<hr/>
 If you want to run locally:
 DEV:
 ```
