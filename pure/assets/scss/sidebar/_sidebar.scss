@@ -2,11 +2,13 @@
     background-color: var(--color-black);
     width: 220px;
     min-height: 100vh;
+    height: 100vh;
+    top: 0;
     display: flex;
     flex-direction: column;
     padding: 2rem 20px;
     color: white;
-    position: relative;
+    position: sticky;
     transition: 300ms ease-in-out;
 
     &__header {

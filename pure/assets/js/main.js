@@ -67,18 +67,23 @@ const toggleSidebar = () => {
  */
 const dropdownToggle = (ev) => {
     const dropdown = ev.target.offsetParent;
+    let value_container = ev.target.getElementsByClassName('value-container')[0];
+    console.log(value_container);
     const content = dropdown.querySelector('.dropdown__content');
     const options = content.querySelectorAll('.dropdown__content__item');
     if (dropdown.hasAttribute('data-open'))  {
         dropdown.removeAttribute('data-open')
+        options.forEach(option => {
+            option.onclick = null;
+        })
     } else {
         dropdown.setAttribute('data-open', 'true');
         options.forEach(option => {
             option.onclick = () => {
                 const value = option.getAttribute('data-value');
                 const name = option.textContent;
-                ev.target.querySelector('.value-container').textContent = name;
                 dropdown.setAttribute('data-selected', value);
+                value_container.textContent = name;
                 dropdown.removeAttribute('data-open')
             }
         })

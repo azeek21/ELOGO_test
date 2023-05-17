@@ -1,0 +1,15 @@
+.table {
+    font-size: 12px;
+    font-weight: 600px;
+    border-collapse: collapse;
+    border: 1px solid transparent;
+    & th {
+        padding: 16px 32px;
+    }
+    & td, th {
+    border-color: var(--color-gray-mid);
+    }
+    & td {
+        text-align: center;
+    }
+}

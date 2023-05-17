@@ -51,4 +51,18 @@
             }
         }
     }
+
+    &__composite {
+        font-weight: 600;
+        
+        & .dropdown__selected {
+            border: none;
+            font-weight: 600;
+            padding: 0;
+            &:hover {
+                background: none;
+                border: none;
+            }
+        }
+    }
 }
