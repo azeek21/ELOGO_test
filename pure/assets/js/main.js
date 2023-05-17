@@ -15,7 +15,7 @@ const hasLocalSotrage = () => {
     return true;
 }
 
-// this code is a spaghetti, but it works
+// I know this code is a spaghetti, but it works
 // TODO: clean up, optimize.
 const toggleSidebar = () => {
     const sidebar = document.getElementById('sidebar');
@@ -102,4 +102,27 @@ const showModal = () => {
 const closeModal = () => {
     const modal = document.getElementById('action-dialog');
     modal.close();
+}
+
+const sidebarInit = () => {
+    const sidebar = document.getElementById('sidebar');
+    let collapse = null;
+    if (hasLocalSotrage()) {
+        collapse = localStorage.getItem('sidebar-collapsed');
+    }
+    console.log('sidebar init', collapse);
+    if (collapse && collapse == 'true') {
+        sidebar.classList.add('sidebar_collapsed');
+        try {
+            document.getElementById('logo-img').setAttribute('src', "assets/img/e.svg")
+        } catch (e) {
+            
+        }
+    } else if (collapse && collapse == 'false') {
+        sidebar.classList.remove('sidebar_collapsed');
+        // actually, if collapse is false, there's nothing to do
+        // which means above line is useless, but this is more verbose and 
+        // clears up any assumptions
+    }
+
 }
