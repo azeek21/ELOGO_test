@@ -1,0 +1,99 @@
+.sidebar {
+    background-color: var(--color-black);
+    width: 220px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 20px;
+    color: white;
+    position: relative;
+    transition: 300ms ease-in-out;
+
+    &__header {
+        display: flex;
+        align-items: center;
+    }
+    &__collapser {
+        margin-left: auto;
+        transform: rotate(180deg);
+        &:active {
+            transform: scale(1);
+        }
+    }
+
+    &__main {
+        display: flex;
+        flex-direction: column;
+        gap: 32px; //2rem
+        margin: auto 0;
+    }
+    &__bots {
+        gap: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        .button-with-counter {
+            padding-top: 0;
+            padding-bottom: 0;
+
+        }
+
+    }
+    &__profile {
+        padding: 28px 0;
+        margin: 16px 0;
+        gap: 12px;
+        border-top: 1px solid var(--color-gray-dark);
+        border-bottom: 1px solid var(--color-gray-dark);
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        font-size: 14px;
+        cursor: pointer;
+    }
+
+    &__bottom {
+        justify-self: flex-end;
+    }
+    &_collapsed {
+        .sidebar__header {
+            justify-content: center;
+        }
+        .sidebar__collapser {
+            position: absolute;
+            right: 0;
+            transform: translateX(50%);
+            &:active {
+            transform: translateX(50%) scale(0.9);
+            }
+        }
+        width: 80px;
+        padding: 2rem 14px;
+        & p, span {
+            display: none;
+        }
+        button {
+            justify-content: center;
+        }
+
+        .sidebar__profile {
+            justify-content: center;
+            &-info-container {
+                display: none;
+            }
+        }
+       .button-with-counter {
+        border-radius: 100px;
+        background-color: var(--color-purple);
+        font-size: 10px;
+        font-weight: 700;
+        padding-top: 5px;
+        padding-bottom: 5px;
+
+        & p {
+            display: block;
+        }
+       }
+    }   
+}

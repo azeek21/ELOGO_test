@@ -1,0 +1,25 @@
+.card {
+    border-radius: var(--border-big);
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+
+    &__item {
+        padding: 16px 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    &__divider {
+        height: 1px;
+        width: 100%;
+        background-color: var(--color-gray-mid);
+    }
+
+    &__title {
+        margin: 0;
+        padding: 0;
+    }
+}

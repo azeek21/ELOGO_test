@@ -1,0 +1,66 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    color: black;
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+    }
+    & label {
+        font-size: 12px;
+        font-weight: 600;
+    }
+
+    &__input-label {
+        color: var(--color-gray-mid);
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__checkbox-label {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        cursor: pointer;
+    }
+
+    &__switch {
+        border: 1px solid var(--color-gray-mid);
+        border-radius: 100px;
+        width: 32px;
+        height: 18px;
+        background-color: var(--color-gray);
+        display: flex;
+        align-items: center;
+        transition: 300ms ease-in-out;
+        padding: 1px;
+        &-child {
+            width: 13px;
+            aspect-ratio: 1 / 1;
+            border-radius: 50%;
+            background-color: white;
+
+        }
+    }
+
+    &__switch:has(input[type="checkbox"]:checked){ 
+        background-color: var(--color-purple);
+        justify-content: end;
+    }
+
+    &__input {
+        padding: 8px 12px;
+        font-size: 16px;
+        font-weight: 500;
+        border:1px solid var(--color-gray-mid);
+        border-radius: var(--border-big);
+    }
+    &__input:disabled {
+        padding-left: 0;
+        border: none;
+        background-color: transparent;
+        color: black;
+    }
+}

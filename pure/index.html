@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/normalize.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <script type="text/javascript" src="assets/js/main.js">
+    </script>
+    <title>ELGO</title>
+  </head>
+  <body class="body">
+    <aside id="sidebar" class="sidebar">
+        <div class="sidebar__header">
+            <a class="logo-container" href="/">
+                <img id="logo-img" src="/assets/img/logo.svg" alt="ELGO">
+            </a>
+            <button class="sidebar__collapser button button_small button_secondary" onclick="toggleSidebar()">
+                <img src="assets/img/arrow-right.svg" alt="arrow">
+            </button>
+        </div>
+
+        <div class="sidebar__main">
+
+            <div class="sidebar__main__item">
+                <button class="button full_width">
+                    <img src="/assets/img/home.svg" alt="HOME">
+                    <p class="pad-mar_0">Home</p>
+                </button>
+    
+                <button class="button full_width">
+                    <img src="/assets/img/dollar-sign.svg" alt="Billing">
+                    <p class="pad-mar_0">Billing</p>
+                </button>
+            </div>
+
+
+            <div class="sidebar__main__item sidebar__bots">
+                <div class="title-action ">
+                    <p class="title-action__title pad-mar_0">Your bots</p>
+                    <button class="button button_small title-action__action">
+                        <img src="assets/img/plus-square.svg" alt="">
+                    </button>
+                </div>
+                <button class="button button-with-counter full_width ">
+                    <p class="pad-mar_0">DCA</p>
+                    <span class="counter counter_active">3</span>
+                </button>
+        
+                <button class="button button-with-counter full_width ">
+                    <p class="pad-mar_0">GRID</p>
+                    <span class="counter counter_active">3</span>
+                </button>
+
+                <button class="button button-with-counter full_width ">
+                    <p class="pad-mar_0">HODL</p>
+                    <span class="counter"> 0 </span>
+                </button>
+            </div>
+
+        </div>
+
+        <div class="sidebar__bottom">
+            <button class="button button_secondary full_width">
+                <img src="assets/img/settings.svg" alt="settings">
+                <p class="pad-mar_0">Settings</p>
+            </button>
+
+            <div class="sidebar__profile">
+                <div class="sidebar__profile-image-container">
+                    <img src="assets/img/profile-picture.png" alt="profile-picture">
+                </div>
+                <div class="sidebar__profile-info-container">
+                    <p class="pad-mar_0">Oleg Veber</p>
+                    <p class="pad-mar_0 color_gray"> Standart Plan</p>
+                </div>
+            </div>
+
+            <button class="button full_width">
+                <img src="assets/img/log-out.svg" alt="log-out">
+                <p class="pad-mar_0">Log out</p>
+            </button>
+            
+        </div>
+    </aside>
+
+    <main class="page">
+        <h3 class="page-title">Settings</h3>
+        <div>
+            <div class="page__content">
+                <div class="card">
+                    <div class="card__item">
+                    <h4 class="card__title">Personal data</h4>
+                    </div>
+                    <div class="card__divider"></div>
+                    <div class="card__item">
+                        <form class="form" action="">
+        
+                            <div class="form__item">
+                                <label for="" class="form__input-label">ID
+                                    <input class="form__input" type="text" disabled value="173254">
+                                </label>
+                            </div>
+        
+                            <div class="form__item">
+                                <label for="" class="form__input-label">
+                                    Email
+                                    <input class="form__input" type="email" name="" id="" value="megatrader1982@mail.ru" disabled>
+                                </label>
+                                <button class="button button_tertiary">Change email</button>
+                            </div>
+        
+                            <div class="form__item">
+                                <label for="" class="form__input-label">
+                                    Name
+                                    <input class="form__input" type="email" name="" id="" value="Oleg Vebber" disabled>
+                                </label>
+                                <button class="button button_tertiary">Change name</button>
+                            </div>
+        
+                        </form>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card__item">
+                        <h4 class="card__title">Security</h4>
+                    </div>
+                    <div class="card__divider"></div>
+                    <div class="card__item">
+                        <form class="form">
+                            <div class="form__item">
+                                <label class="form__checkbox-label" for="vv">
+                                    Two-factor authentication
+                                    <div class="form__switch">
+                                        <div class="form__switch-child"></div>
+                                        <input class="hide-checkbox" id="vv" type="checkbox" checked>
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="form__item">
+                                <label class="form__checkbox-label" for="v1">
+                                    Ip address check
+                                    <div class="form__switch">
+                                        <div class="form__switch-child"></div>
+                                        <input class="hide-checkbox" id="v1" type="checkbox">
+                                    </div>
+                                </label>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="card__divider"></div>
+
+                    <div class="card__item">
+                        <div class="divided">
+                            <p class="pad-mar_0 fw_600 fs_12">Devices and activity</p>
+                            <p class="pad-mar_0 fw_600 fs_12 color_purple">4</p>
+                        </div>
+                    </div>
+
+                    <div class="card__divider"></div>
+                    <div class="card__item">
+                        <div class="divided">
+                            <p class="pad-mar_0 fs_12 fw_500">Google Chrome</p>
+                            <p class="pad-mar_0 fs_12 fw_500">London</p>
+                            <p class="pad-mar_0 fs_12 fw_500">2:54</p>
+                        </div>
+
+                        <div class="divided">
+                            <p class="pad-mar_0 fs_12 fw_500">Apple Iphone X</p>
+                            <p class="pad-mar_0 fs_12 fw_500">London</p>
+                            <p class="pad-mar_0 fs_12 fw_500">3:59</p>
+                        </div>
+
+                        <div class="divided">
+                            <p class="pad-mar_0 fs_12 fw_500">Yandex Browser</p>
+                            <p class="pad-mar_0 fs_12 fw_500">New York</p>
+                            <p class="pad-mar_0 fs_12 fw_500">12:16</p>
+                        </div>
+                    </div>
+
+                    <div class="card__divider"></div>
+                    <div class="card__item">
+                        <button class="button button_tertiary">Show more</button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    
+                    <div class="card__item">
+                        <h4 class="card__title">Billing</h4>
+                    </div>
+
+                    <div class="banner">
+                        <div class="banner__content">
+                                <p class="banner__text pad-mar_0">Subscription plan</p>
+                                <p class="banner__mode pad-mar_0">Standart mode</p>
+                                <button class="button button_primary banner__text">Upgrade your plan</button>        
+                        </div>
+
+                            <div class="banner__image">
+                                <img src="assets/img/zap.svg" alt="">
+                            </div>
+                    </div>
+
+                    <div class="card__item">
+                        <form action="" class="form">
+                            <div class="form__item">
+                                <label for="" class="form__input-label">
+                                    Billing address
+                                    <input class="form__input" type="text" value="Bank accound, **88" disabled>
+                                </label>
+                                <button class="button button_tertiary">
+                                    Change billing address
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="card__divider"></div>
+                    <div class="card__item">
+                        <div class="divided">
+                            <p class="pad-mar_0 fs_12">You have <br/><span class="color_purple fw_600 fs_12">8</span> connections</p>
+                            <button class="button button_tertiary"><p class="pad-mar_0 fs_12">Manage connections</p></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+  </body>
+</html>
