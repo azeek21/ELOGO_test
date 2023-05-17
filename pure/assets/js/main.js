@@ -60,3 +60,27 @@ const toggleSidebar = () => {
     logoImg.setAttribute('src', 'assets/img/e.svg')
 
 }
+
+/**
+ * Toggles visibility of dropdowns content (selectable options);
+ * @param {Event} ev 
+ */
+const dropdownToggle = (ev) => {
+    const dropdown = ev.target.offsetParent;
+    const content = dropdown.querySelector('.dropdown__content');
+    const options = content.querySelectorAll('.dropdown__content__item');
+    if (dropdown.hasAttribute('data-open'))  {
+        dropdown.removeAttribute('data-open')
+    } else {
+        dropdown.setAttribute('data-open', 'true');
+        options.forEach(option => {
+            option.onclick = () => {
+                const value = option.getAttribute('data-value');
+                const name = option.textContent;
+                ev.target.querySelector('.value-container').textContent = name;
+                dropdown.setAttribute('data-selected', value);
+                dropdown.removeAttribute('data-open')
+            }
+        })
+    }
+}

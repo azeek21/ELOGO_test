@@ -4,7 +4,7 @@
 @import "page/page";
 @import "card/card";
 @import "form/form";
-
+@import "dropdown/dropdown";
 *,
 *::after,
 *::before {
@@ -67,6 +67,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 5px;
 }
 
 .fw_600 {

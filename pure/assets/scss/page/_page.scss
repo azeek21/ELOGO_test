@@ -13,5 +13,7 @@
         display: flex;
         padding: 1rem 0;
         justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 1rem;
     }
 }

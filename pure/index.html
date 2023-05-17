@@ -232,6 +232,73 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="card">
+                    <div class="card__item">
+                        <h4 class="card__title">
+                            Language
+                        </h4>
+                    </div>
+                    <div class="card__divider"></div>
+                    <div class="card__item">
+                        <form class="form" onsubmit="(event) => ev.preventDefault()">
+                            <div class="form__item">
+                                <label class="form__input-label">
+                                    Language
+                                    <div id="language" class="dropdown" data-selected="en-En">
+                                        <div class="dropdown__selected button_tertiary divided full_width" onclick="dropdownToggle(event)">
+                                            <p class="pad-mar_0 value-container">English</p>
+                                            <img class="dropdown__opener" src="assets/img/chevron-down.svg" alt="v">
+                                        </div>
+                                        <div class="dropdown__content">
+                                            <p class="dropdown__content__item" data-value="en-En">English</p>
+                                            <p class="dropdown__content__item" data-value="ru-RU">Русский</p>
+                                            <p class="dropdown__content__item" data-value="uz-Uz">O`zbekcha</p>
+                                        </div>
+                                    </div>
+                                </label>
+                            </div>
+
+                            <div class="form__item">
+                                <label class="form__input-label">
+                                    Time zone
+                                    <div id="timezone" class="dropdown" data-selected="utc+007">
+                                        <div class="dropdown__selected button_tertiary divided full_width" onclick="dropdownToggle(event)">
+                                            <p class="pad-mar_0 value-container">UTC: +07:00 Asia/Novosibirsk</p>
+                                            <img class="dropdown__opener" src="assets/img/chevron-down.svg" alt="v">
+                                        </div>
+                                        <div class="dropdown__content">
+                                            <p class="dropdown__content__item" data-value="utc+009">UTC: +09:00 Europe/Paris</p>
+                                            <p class="dropdown__content__item" data-value="utc+005">UTC: +05:00 USA/Wachingdon DC</p>
+                                            <p class="dropdown__content__item" data-value="utc+007">UTC: +07:00 Asia/Novosibirsk </p>
+                                        </div>
+                                    </div>
+                                </label>
+                            </div>
+
+                            <div class="form__item">
+                                <div class="divided">
+                                    <input type="text" class="form__input fs_12" placeholder="Code">
+                                    <button class="button button_primary">Apply</button>
+                                </div>
+                            <p class="pad-mar_0 fs_12 color_purple fw_600" style="margin-top: 8px;">Share your own code to get discound</p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card__item">
+                        <div class="divided">
+                            <h4 class="card__title">Notifications</h4>
+                            <button class="button button_tertiary fw_500 fs_12"> Connect telegram bot </button>
+                        </div>
+                    </div>
+                    <div class="card__divider"></div>
+                    <div class="card__item">
+                        <!-- TODO: ADD TABLE -->
+                    </div>
+                </div>
             </div>
         </div>
 
