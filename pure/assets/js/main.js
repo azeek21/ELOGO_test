@@ -74,3 +74,22 @@ const initDropdown = () => {
         })
     });
 }
+
+const initNotifications = () => {
+    const notifications = document.querySelector('#notifications');
+    const handler = () => {
+        if (window.scrollY > 20) {
+            notifications.classList.add('sticked');
+        } else {
+            notifications.classList.remove('sticked');
+        }
+    }
+    let timeoutId = null;
+    window.onscroll = () => {
+        clearTimeout(timeoutId);
+        setTimeout(() => {
+            timeoutId = null;
+            handler();
+        }, 200);
+    }
+}

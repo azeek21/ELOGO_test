@@ -130,7 +130,17 @@
     </aside>
 
     <main class="page">
-        <h3 class="page-title">Settings. NOTE: Actively under development</h3>
+        <div id="notifications" class="page__notifications">
+            <h3 class="pad-mar_0 hideable">Settings</h3>
+            
+            <p class="pad-mar_0 divided">
+                <span class="counter counter_active">!</span>NOTE: Actively under development
+            </p>
+
+            <p class="pad-mar_0 divided">
+                <span class="counter counter_active">9</span>Another notification
+            </p>
+        </div>
         <div>
             <div class="page__content">
                 <div class="card grid_personal">
@@ -562,6 +572,7 @@
     <script defer>
         sidebarInit();
         initDropdown();
+        initNotifications()
     </script>
   </body>
 </html>
