@@ -14,19 +14,8 @@
         transition: 300ms ease-in-out;
         transform: rotateX(0deg);
     }
-    
-    &[data-open] {
-        & .dropdown__opener {
-            transform: rotateX(180deg);
-        }
-        .dropdown__content {
-            height: max-content;
-            opacity: 1;
-            transform: rotateX( 0deg);
-        }
-    }
 
-    &:has(input[type="checkbox"]:checked) {
+    &:hover {
         & .dropdown__opener {
             transform: rotateX(180deg);
         }
