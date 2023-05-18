@@ -50,7 +50,9 @@
     <aside id="sidebar" class="sidebar">
         <div class="sidebar__header">
             <a class="logo-container" href="#">
-                <img id="logo-img" src="assets/img/logo.svg" alt="ELGO">
+                <img class="sidebar__logo_big" src="assets/img/logo.svg" alt="ELGO">
+                <img class="sidebar__logo_small" src="assets/img/e.svg" alt="ELGO">
+
             </a>
             <button class="sidebar__collapser button button_small button_secondary" onclick="toggleSidebar()">
                 <img src="assets/img/arrow-right.svg" alt="arrow">
@@ -282,9 +284,10 @@
                                 <label class="form__input-label">
                                     Language
                                     <div id="language" class="dropdown" data-selected="en-En">
-                                        <div class="dropdown__selected button_tertiary divided full_width" onclick="dropdownToggle(event)">
+                                        <div class="dropdown__selected button_tertiary divided full_width" onclick=" ">
                                             <p class="pad-mar_0 value-container">English</p>
                                             <img class="dropdown__opener" src="assets/img/chevron-down.svg" alt="v">
+                                            <input type="checkbox" class="hide-checkbox">
                                         </div>
                                         <div class="dropdown__content">
                                             <p class="dropdown__content__item" data-value="en-En">English</p>
@@ -302,9 +305,10 @@
                                 <label class="form__input-label">
                                     Time zone
                                     <div id="timezone" class="dropdown" data-selected="utc+007">
-                                        <div class="dropdown__selected button_tertiary divided full_width" onclick="dropdownToggle(event)">
+                                        <div class="dropdown__selected button_tertiary divided full_width" onclick=" ">
                                             <p class="pad-mar_0 value-container">UTC: +07:00 Asia/Novosibirsk</p>
                                             <img class="dropdown__opener" src="assets/img/chevron-down.svg" alt="v">
+                                            <input type="checkbox" class="hide-checkbox">
                                         </div>
                                         <div class="dropdown__content">
                                             <p class="dropdown__content__item" data-value="utc+009">UTC: +09:00 Europe/Paris</p>
@@ -329,7 +333,7 @@
                     </div>
                 </div>
 
-                <div class="card grid_table">
+                <div class="card card_twiced grid_table">
                     <div class="card__item" style="padding: 9px 20px">
                         <div class="divided">
                             <h4 class="card__title">Notifications</h4>
@@ -349,9 +353,10 @@
                             <tr >
                                 <th>
                                     <div class="dropdown dropdown__composite" data-selected="security">
-                                        <div class="dropdown__selected button_tertiary divided full_width" onclick="dropdownToggle(event)">
+                                        <div class="dropdown__selected button_tertiary divided full_width" onclick=" ">
                                             <p class="pad-mar_0 value-container">Security</p>
                                             <img class="dropdown__opener" src="assets/img/chevron-down.svg" alt="v">
+                                            <input type="checkbox" class="hide-checkbox">
                                         </div>
                                         <div class="dropdown__content">
                                             <p class="dropdown__content__item" data-value="security">security</p>
@@ -405,9 +410,10 @@
                             <tr>
                                 <th>
                                     <div class="dropdown dropdown__composite" data-selected="bot-dca">
-                                        <div class="dropdown__selected button_tertiary divided full_width" onclick="dropdownToggle(event)">
+                                        <div class="dropdown__selected button_tertiary divided full_width" onclick=" ">
                                             <p class="pad-mar_0 value-container">DCA bot</p>
                                             <img class="dropdown__opener" src="assets/img/chevron-down.svg" alt="v">
+                                            <input class="hide-checkbox" type="checkbox" >
                                         </div>
                                         <div class="dropdown__content">
                                             <p class="dropdown__content__item" data-value="security">security</p>
@@ -452,9 +458,10 @@
                             <tr>
                                 <th>
                                     <div class="dropdown dropdown__composite" data-selected="bto-grid">
-                                        <div class="dropdown__selected button_tertiary divided full_width" onclick="dropdownToggle(event)">
+                                        <div class="dropdown__selected button_tertiary divided full_width" onclick=" ">
                                             <p class="pad-mar_0 value-container">GRID bot</p>
                                             <img class="dropdown__opener" src="assets/img/chevron-down.svg" alt="v">
+                                            <input class="hide-checkbox" type="checkbox" >
                                         </div>
                                         <div class="dropdown__content">
                                             <p class="dropdown__content__item" data-value="security">security</p>
@@ -499,9 +506,10 @@
                             <tr>
                                 <th>
                                     <div class="dropdown dropdown__composite" data-selected="bot-hodl">
-                                        <div class="dropdown__selected button_tertiary divided full_width" onclick="dropdownToggle(event)">
+                                        <div class="dropdown__selected button_tertiary divided full_width" onclick=" ">
                                             <p class="pad-mar_0 value-container">HODL bot</p>
                                             <img class="dropdown__opener" src="assets/img/chevron-down.svg" alt="v">
+                                            <input class="hide-checkbox" type="checkbox" >
                                         </div>
                                         <div class="dropdown__content">
                                             <p class="dropdown__content__item" data-value="security">security</p>
@@ -553,6 +561,7 @@
 
     <script defer>
         sidebarInit();
+        initDropdown();
     </script>
   </body>
 </html>

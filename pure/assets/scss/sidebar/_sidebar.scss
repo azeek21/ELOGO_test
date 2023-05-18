@@ -1,6 +1,7 @@
 .sidebar {
     background-color: var(--color-black);
     width: 220px;
+    min-width: 220px;
     min-height: 100vh;
     height: 100vh;
     top: 0;
@@ -20,6 +21,14 @@
         transform: rotate(180deg);
         &:active {
             transform: scale(1);
+        }
+    }
+    &__logo {
+        &_big {
+            display: inline-block;
+        }
+        &_small {
+            display: none;
         }
     }
 
@@ -59,6 +68,17 @@
         justify-self: flex-end;
     }
     &_collapsed {
+        width: 80px;
+        min-width: 80px;
+        padding: 2rem 14px;
+        .sidebar__logo {
+            &_big {
+                display: none;
+            }
+            &_small {
+                display: inline-block;
+            }
+        }
         .sidebar__header {
             justify-content: center;
         }
@@ -70,8 +90,6 @@
             transform: translateX(50%) scale(0.9);
             }
         }
-        width: 80px;
-        padding: 2rem 14px;
         & p, span {
             display: none;
         }
@@ -109,6 +127,8 @@
         z-index: 1;
         &_collapsed {
             width: 50px;
+            min-width: 50px;
+            padding: 1rem 5px;
         }
     }
 }
