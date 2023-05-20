@@ -28,6 +28,10 @@
     &_twiced {
         width: 100%;
     }
+    &-width_auto {
+        width: auto;
+        max-width: 600px;
+    }
 }
 
 @media (max-width: 400px) {
